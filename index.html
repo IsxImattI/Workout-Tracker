@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1><i class='bx bx-dumbbell'></i> Workout Tracker</h1>
+        <div class="form-group">
+            <label for="exerciseInput">Exercise:</label>
+            <input type="text" id="exerciseInput" placeholder="Enter exercise" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="durationInput">Duration (mins):</label>
+            <input type="number" id="durationInput" placeholder="Enter duration" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="caloriesInput">Calories Burned:</label>
+            <input type="number" id="caloriesInput" placeholder="Enter calories" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="categoryInput">Category:</label>
+            <select id="categoryInput" class="form-control">
+                <option value="Running">Running</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Swimming">Swimming</option>
+                <!-- Add more exercise categories as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="goalInput">Set a Goal:</label>
+            <input type="number" id="goalInput" placeholder="Enter your fitness goal" class="form-control">
+        </div>
+        <button id="addExerciseButton" class="btn btn-success btn-block">
+            <i class="fas fa-plus-circle"></i> Add Exercise
+        </button>
+        <button id="showStatsButton" class="btn btn-primary btn-block mt-3">
+            Show Statistics
+        </button>
+        
+        <!-- List of exercises -->
+        <ul id="exerciseList" class="list-group mt-3"></ul>
+
+        <!-- Statistics container -->
+        <div class="statistics mt-4" id="statisticsContainer">
+            <h2>Statistics</h2>
+            <div id="runningStats" class="category-stats"></div>
+            <div id="cyclingStats" class="category-stats"></div>
+            <div id="swimmingStats" class="category-stats"></div>
+            <!-- Add more div elements for additional exercise categories as needed -->
+            <div id="goalProgressContainer" class="category-stats"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <footer class="mt-5 text-center">
+        <p>Workout Tracker <span>Project</span></p>
+    </footer>
+
+</body>
+</html>
